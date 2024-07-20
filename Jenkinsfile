@@ -1,9 +1,9 @@
 bpipeline {
    agent none
   environment{
-      BUILD_SERVER_IP='ec2-user@172.31.9.51'
+      BUILD_SERVER_IP='ec2-user@172.31.36.146'
        IMAGE_NAME='sathishgunasekaran/php:mysql$BUILD_NUMBER'
-       DEPLOY_SERVER_IP='ec2-user@172.31.8.21'
+       DEPLOY_SERVER_IP='ec2-user@172.31.42.92'
    }
     stages {          
         stage('BUILD DOCKERIMAGE AND PUSH TO DOCKERHUB') {
