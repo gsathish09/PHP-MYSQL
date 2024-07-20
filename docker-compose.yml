@@ -1,0 +1,19 @@
+version: "3"
+services:
+    web:
+      image: sathishgunasekaran/php:mysql
+      ports:
+      - "8003:80"
+      deploy:
+          replicas: 1
+      depends_on:
+      - mysql
+    mysql:
+      image: sathishgunasekaran/mysql:v1
+      volumes:
+      - db_data:/var/lib/mysql
+      environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_DATABASE: mydatabase
+volumes:
+   db_data: {}
