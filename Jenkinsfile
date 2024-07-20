@@ -1,4 +1,4 @@
-bpipeline {
+pipeline {
    agent none
   environment{
       BUILD_SERVER_IP='ec2-user@172.31.36.146'
